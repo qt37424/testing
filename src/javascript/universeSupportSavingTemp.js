@@ -1,5 +1,6 @@
 import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls";
+import { ExtrudeGeometry } from "https://cdn.skypack.dev/three@0.136.0/src/geometries/ExtrudeGeometry";
 import { TextGeometry } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/geometries/TextGeometry";
 import { FontLoader  } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/FontLoader.js";
 
@@ -123,6 +124,31 @@ p.rotation.order = "ZYX";
 p.rotation.z = 0.2; // tilt of object
 scene.add(p);
 
+// ====================Add shape====================
+const length = 2, width = 2;
+const shape = new THREE.Shape();
+shape.moveTo( 0,0 );
+shape.lineTo( 0, width );
+shape.lineTo( length, width );
+shape.lineTo( length, 0 );
+shape.lineTo( 0, 0 );
+
+const extrudeSettings = {
+  steps: 2,
+  depth: 2,
+  bevelEnabled: true,
+  bevelThickness: 1,
+  bevelSize: 1,
+  bevelOffset: 0,
+  bevelSegments: 1
+};
+const geometry = new THREE.ExtrudeGeometry( shape, extrudeSettings );
+const shape3D = new THREE.Mesh( geometry, textMaterial );
+shape3D.position.set( -16, -1, -0.5 );
+shape3D.rotation.order = "ZYX";
+scene.add( shape3D );
+// ====================Add shape====================
+
 // ====================Add text ====================
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
   const textGeo = new TextGeometry("Mai Thu Thuy", {
@@ -137,7 +163,6 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
 
   const mesh = new THREE.Mesh( textGeo, textMaterial );
   mesh.position.set( -8.5, 1, -0.5 );
-
   scene.add( mesh );
 });
 
@@ -154,7 +179,6 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
 
   const mesh = new THREE.Mesh( textGeo, textMaterial );
   mesh.position.set( -8, -3, -0.5 );
-
   scene.add( mesh );
 });
 // ====================Add text ====================
@@ -172,5 +196,6 @@ renderer.setAnimationLoop(() => {
   let time = clock.getElapsedTime() * 0.5;
   gu.time.value = time * Math.PI;
   p.rotation.y = time * 0.05;
+  shape3D.rotation.y = time * 0.05;
   renderer.render(scene, camera);
 });
