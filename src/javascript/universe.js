@@ -3,13 +3,14 @@ import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/js
 import { TextGeometry } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/geometries/TextGeometry";
 import { FontLoader  } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/FontLoader.js";
 
-// var defined = "QXV0aG9yOiBMdWMg";
-// var datacenter = ["aHR0cHM6L", "y93d3cuZmF", "jZWJvb2suY29t"];
 let scene = new THREE.Scene();
 scene.background = new THREE.Color("#160016");
 let camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 1, 1000);
 const loader = new FontLoader();
-const textMaterial = new THREE.MeshPhongMaterial( { color: "#FF5733" } );
+const textMaterial = new THREE.MeshPhongMaterial({
+  color: "#fff",
+  aoMapIntensity: 5,
+});
 
 camera.position.set(0, 4, 21);
 let renderer = new THREE.WebGLRenderer();
@@ -20,16 +21,13 @@ window.addEventListener("resize", (event) => {
   camera.updateProjectionMatrix();
   renderer.setSize(innerWidth, innerHeight);
 });
-// datacenter.push("L3Byb2ZpbGUu");
 let controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
-// datacenter.push("cGhwP2lkPTEw");
 let gu = {
   time: { value: 0 },
 };
 
-// defined = defined.concat("VGhpZW4gUGhvbmc=");
 let sizes = [];
 let shift = [];
 let pushShift = () => {
@@ -40,8 +38,7 @@ let pushShift = () => {
     Math.random() * 0.9 + 0.1
   );
 };
-// datacenter.push("MDA0NTQwNj");
-// var context = atob(defined);
+
 // Point in hình cầu
 let pts = new Array(50000).fill().map((p) => {
   sizes.push(Math.random() * 1.5 + 0.5);
@@ -67,8 +64,6 @@ for (let i = 0; i < 100000; i++) {
   sizes.push(Math.random() * 1.5 + 0.5);
   pushShift();
 }
-// console.log(context);
-// datacenter.push("I2MTQ5MQ" + "==");
 let g = new THREE.BufferGeometry().setFromPoints(pts);
 g.setAttribute("sizes", new THREE.Float32BufferAttribute(sizes, 1));
 g.setAttribute("shift", new THREE.Float32BufferAttribute(shift, 4));
@@ -129,8 +124,7 @@ p.rotation.z = 0.2;
 scene.add(p);
 
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  console.log(font)
-  const textGeo = new TextGeometry( "Mai Thu Thuy", {
+  const textGeo = new TextGeometry("Mai Thu Thuy", {
       font: font,
       size: 2,
       height: 1,
@@ -147,8 +141,7 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
 } );
 
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  console.log(font)
-  const textGeo = new TextGeometry( "14-03-1997", {
+  const textGeo = new TextGeometry("14-03-1997", {
       font: font,
       size: 2,
       height: 1,
@@ -171,9 +164,7 @@ const dirLight = new THREE.DirectionalLight( 0xffffff, 0.8 );
 dirLight.position.set( 0, 1000, 0 );
 scene.add( dirLight );
 
-// const data = atob(datacenter.join("")); => Chèn link face nè
 let clock = new THREE.Clock();
-// console.log(data);
 renderer.setAnimationLoop(() => {
   controls.update();
   let time = clock.getElapsedTime() * 0.5;
