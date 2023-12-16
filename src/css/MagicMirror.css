@@ -1,0 +1,35 @@
+:root {
+  --img-width: 730px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.censor {
+  width: var(--img-width);
+  filter: blur(1px);
+}
+
+.mask {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+
+.uncensor {
+  position: absolute;
+  width: 230px;
+  height: 150px;
+  border: 1px solid red;
+  z-index: 999;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: var(--img-width) auto;
+  background-image: 
+    url("https://codetheworld.io/wp-content/uploads/2023/11/rNPrrXG-uncensor.png");
+  cursor: move;
+}
