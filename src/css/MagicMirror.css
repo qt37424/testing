@@ -33,3 +33,9 @@ body {
     url("https://codetheworld.io/wp-content/uploads/2023/11/rNPrrXG-uncensor.png");
   cursor: move;
 }
+
+#log {
+  height: 200px;
+  width: 600px;
+  overflow: scroll;
+}

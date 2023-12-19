@@ -23,21 +23,21 @@ const handleMouseMove = debounce(
       $mask.style.left = `${event.x - clientWidth / 2}px`;
     }
   },
-  10
+  1
 )
 
 const handleMouseDown = debounce(
   (event) => {
     isMoving = true;
   },
-  10
+  1
 )
 
 const handleMouseUp = debounce(
   (event) => {
     isMoving = false;
   },
-  10
+  1
 )
 
 document.addEventListener(
@@ -54,3 +54,5 @@ document.addEventListener(
   'mouseup',
   handleMouseUp,
 )
+
+// ============================= Touch Event =============================
