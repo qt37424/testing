@@ -125,7 +125,7 @@ scene.add(p);
 
 // ====================Add text ====================
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("Mai Thu Thuy", {
+  const textGeo = new TextGeometry("Tran Trinh Quang", {
       font: font,
       size: 2,
       height: 1,
@@ -142,7 +142,7 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
 });
 
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("14-03-1997", {
+  const textGeo = new TextGeometry("??-??-????", {
       font: font,
       size: 2,
       height: 1,

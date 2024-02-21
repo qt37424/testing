@@ -54,5 +54,3 @@ document.addEventListener(
   'mouseup',
   handleMouseUp,
 )
-
-// ============================= Touch Event =============================
