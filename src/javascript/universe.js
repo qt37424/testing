@@ -153,7 +153,7 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
   } );
 
   const mesh = new THREE.Mesh( textGeo, textMaterial );
-  mesh.position.set( -8, -3, -0.5 );
+  mesh.position.set( -4, -3, -0.5 );
 
   scene.add( mesh );
 });
