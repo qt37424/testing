@@ -125,7 +125,7 @@ scene.add(p);
 
 // ====================Add text ====================
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("Tran Trinh Quang", {
+  const textGeo = new TextGeometry("Nguyen Thi Quynh Giang", {
       font: font,
       size: 2,
       height: 1,
@@ -136,13 +136,13 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
   } );
 
   const mesh = new THREE.Mesh( textGeo, textMaterial );
-  mesh.position.set( -8.5, 1, -0.5 );
+  mesh.position.set(-15, 1, -0.5 );
 
   scene.add( mesh );
 });
 
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("??-??-????", {
+  const textGeo = new TextGeometry("Jenny", {
       font: font,
       size: 2,
       height: 1,
