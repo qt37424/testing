@@ -125,7 +125,7 @@ scene.add(p);
 
 // ====================Add text ====================
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("Nguyen Thi Quynh Giang", {
+  const textGeo = new TextGeometry("Nguyen Thi Thuy Nga", {
       font: font,
       size: 2,
       height: 1,
@@ -142,7 +142,7 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
 });
 
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("Jenny", {
+  const textGeo = new TextGeometry("Crazy girl", {
       font: font,
       size: 2,
       height: 1,
