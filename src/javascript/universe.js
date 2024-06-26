@@ -125,7 +125,7 @@ scene.add(p);
 
 // ====================Add text ====================
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("Nguyen Thi Thuy Nga", {
+  const textGeo = new TextGeometry("Thuy Nga", {
       font: font,
       size: 2,
       height: 1,
@@ -136,13 +136,13 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
   } );
 
   const mesh = new THREE.Mesh( textGeo, textMaterial );
-  mesh.position.set(-15, 1, -0.5 );
+  mesh.position.set(-6.5, 1, -0.5 );
 
   scene.add( mesh );
 });
 
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("Crazy girl", {
+  const textGeo = new TextGeometry("Naive Girl", {
       font: font,
       size: 2,
       height: 1,
@@ -153,7 +153,7 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
   } );
 
   const mesh = new THREE.Mesh( textGeo, textMaterial );
-  mesh.position.set( -4, -3, -0.5 );
+  mesh.position.set( -6.5, -3, -0.5 );
 
   scene.add( mesh );
 });
