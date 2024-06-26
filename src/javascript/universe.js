@@ -125,7 +125,7 @@ scene.add(p);
 
 // ====================Add text ====================
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("Thuy Nga", {
+  const textGeo = new TextGeometry("Send you", {
       font: font,
       size: 2,
       height: 1,
@@ -142,7 +142,7 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
 });
 
 loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
-  const textGeo = new TextGeometry("Naive Girl", {
+  const textGeo = new TextGeometry("My Naive Girl", {
       font: font,
       size: 2,
       height: 1,
@@ -153,7 +153,7 @@ loader.load("src/fonts/helvetiker_bold.typeface.json", function ( font ) {
   } );
 
   const mesh = new THREE.Mesh( textGeo, textMaterial );
-  mesh.position.set( -6.5, -3, -0.5 );
+  mesh.position.set( -8.5, -3, -0.5 );
 
   scene.add( mesh );
 });
@@ -174,3 +174,5 @@ renderer.setAnimationLoop(() => {
   p.rotation.y = time * 0.05;
   renderer.render(scene, camera);
 });
+
+setTimeout(function() { alert("Tôi không có time chèn nhạc đâu nhá đừng có ham"); }, 5000);
