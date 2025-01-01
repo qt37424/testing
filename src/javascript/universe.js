@@ -175,4 +175,6 @@ renderer.setAnimationLoop(() => {
   renderer.render(scene, camera);
 });
 
-setTimeout(function() { alert("Tôi không có time chèn nhạc đâu nhá đừng có ham"); }, 5000);
+// setTimeout(function() { alert("Tôi không có time chèn nhạc đâu nhá đừng có ham"); }, 5000);
+// var audio = new Audio('src/audio/ILoveUSoMuch.mp3');
+// audio.play();
