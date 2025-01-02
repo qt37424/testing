@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: var(--img-width) auto;
+  background-image: url("https://scontent.fsgn6-1.fna.fbcdn.net/v/t39.30808-6/470805333_2463711737294774_9090127366229392434_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHYCuZbbLOZX7Ek8fueXN07hQKHbisF5mSFAoduKwXmZM-4V3FCk9idmnyt0WAD-SYH3f-g9pm4dugvlpm3s4AQ&_nc_ohc=zl1AoSGo_2wQ7kNvgEfo-_L&_nc_oc=AdgIiwSQcuSK48NZ0R9eUxIiIZjNoMQgB9NFd1y_hRPvYptUmeNAB7Jr5UTX9JfnZPj2teuo4_nSpr6ian8qVhA3&_nc_zt=23&_nc_ht=scontent.fsgn6-1.fna&_nc_gid=AeJOUg-kRtwnc_4bwJ6sUYL&oh=00_AYCElGVyf1GiKXHwtc-h6nJF0CgNAeY19Ny_wSMbQhaxfg&oe=677C7991");
+}
+
+#clock {
+  font-size: 175px;
+  width: 900px;
+  margin: 200px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
+}
